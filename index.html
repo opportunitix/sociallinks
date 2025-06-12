@@ -1,181 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Social Media Quick Access</title>
-<!-- Google Material Icons CDN -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<style>
-  /* Reset & base */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #FFFFFF;
-    color: #202124;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  a:focus {
-    outline: 3px solid #34A853;
-    outline-offset: 2px;
-  }
-  .material-icons {
-    font-variation-settings:
-      'FILL' 1,
-      'wght' 400,
-      'GRAD' 0,
-      'opsz' 48;
-    vertical-align: middle;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Social Media Quick Access</title>
+  <!-- Google Material Icons CDN -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Reset & base */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-  header {
-    background-color: #1691ca;
-    color: white;
-    padding: 16px 24px;
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #FFFFFF;
+      color: #202124;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    footer {
+      background-color: #181717;
+      color: #F8F9FA;
     text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
-    user-select: none;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  main {
-    flex: 1;
-    padding: 32px 24px 64px;
-    max-width: 880px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-  .intro-text {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #5F6368;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    }
 
-  /* Social links grid */
-  .social-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 32px 48px;
-    justify-items: center;
-    align-items: center;
-  }
-  .social-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #202124;
-    transition: color 0.3s ease;
-    cursor: pointer;
-    user-select: none;
-    width: 100%;
-    max-width: 140px;
-    padding: 12px 16px;
-    border-radius: 12px;
-    background-color: #F8F9FA;
-    box-shadow: 0 2px 5px rgb(0 0 0 / 0.06);
-    text-align: center;
-  }
-  .social-link:hover,
-  .social-link:focus-visible {
-    color: #34A853;
-    background-color: #E8F5E8;
-    box-shadow: 0 5px 15px rgb(52 168 83 / 0.25);
-    outline: none;
-  }
-  .social-icon {
-    font-size: 48px;
-    margin-bottom: 12px;
-  }
-  .social-label {
-    font-size: 1rem;
-    font-weight: 600;
-  }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  /* Responsive typography and layout tweaks */
-  @media (max-width: 640px) {
+    a:focus {
+      outline: 3px solid #34A853;
+      outline-offset: 2px;
+    }
+
+    .material-icons {
+      font-variation-settings:
+        'FILL'1,
+        'wght'400,
+        'GRAD'0,
+        'opsz'48;
+      vertical-align: middle;
+    }
+
+    header {
+      background-color: #1691ca;
+      color: white;
+      padding: 16px 24px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      user-select: none;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
     main {
-      padding: 24px 16px 48px;
-      gap: 24px;
+      flex: 1;
+      padding: 32px 24px 64px;
+      max-width: 880px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
     }
+
+    .intro-text {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #5F6368;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Social links grid */
     .social-links {
-      grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
-      gap: 24px 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 32px 48px;
+      justify-items: center;
+      align-items: center;
     }
+
+    .social-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #202124;
+      transition: color 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+      width: 100%;
+      max-width: 140px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background-color: #F8F9FA;
+      box-shadow: 0 2px 5px rgb(0 0 0 / 0.06);
+      text-align: center;
+    }
+
+    .social-link:hover,
+    .social-link:focus-visible {
+      color: #34A853;
+      background-color: #E8F5E8;
+      box-shadow: 0 5px 15px rgb(52 168 83 / 0.25);
+      outline: none;
+    }
+
     .social-icon {
-      font-size: 40px;
-      margin-bottom: 10px;
+      font-size: 48px;
+      margin-bottom: 12px;
     }
+
     .social-label {
-      font-size: 0.875rem;
+      font-size: 1rem;
+      font-weight: 600;
     }
-  }
-</style>
+
+    /* Responsive typography and layout tweaks */
+    @media (max-width: 640px) {
+      main {
+        padding: 24px 16px 48px;
+        gap: 24px;
+      }
+
+      .social-links {
+        grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+        gap: 24px 32px;
+      }
+
+      .social-icon {
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+
+      .social-label {
+        font-size: 0.875rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header role="banner">
- OpportunitiX - Social Media Quick Access
-</header>
-<main role="main">
-  <p class="intro-text">
- Below are the links to access the social media pages of our Community
-  </p>
-  <nav aria-label="Social media quick access links" class="social-links">
-    <a href="https://www.youtube.com/@opportunitix" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-      <i class="fab fa-youtube social-icon" aria-hidden="true" style="color:#181717;"></i>
-      <span class="social-label">Youtube</span>
-    <a href="https://www.quora.com/Opportunitix" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-      <i class="fab fa-quora social-icon" aria-hidden="true" style="color:#181717;"></i>
-      <span class="social-label">Quora</span>
-    <a href="https://x.com/opportunitix_" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-      <i class="fab fa-twitter social-icon" aria-hidden="true" style="color:#181717;"></i>
-      <span class="social-label">Twitter</span>
-    <a href="https://www.linkedin.com/company/opportunitix/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-      <i class="fab fa-linkedin social-icon" aria-hidden="true" style="color:#181717;"></i>
-      <span class="social-label">Linkedin</span>
-    <a href="https://www.instagram.com/opportunitix_/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-      <i class="fab fa-instagram social-icon" aria-hidden="true" style="color:#181717;"></i>
-      <span class="social-label">Instagram</span>
-    <a href="https://www.reddit.com/r/opportunitix/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-      <i class="fab fa-reddit social-icon" aria-hidden="true" style="color:#181717;"></i>
-      <span class="social-label">Reddit</span>
-    <a href="https://medium.com/@opportunitix" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-      <i class="fab fa-medium social-icon" aria-hidden="true" style="color:#181717;"></i>
-      <span class="social-label">Medium</span>
-    <a href="https://opportunitix.blogspot.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-      <i class="fab fa-google social-icon" aria-hidden="true" style="color:#181717;"></i>
-      <span class="social-label">Website</span>
-    <a href="https://chat.whatsapp.com/EmdRPWUejzEChJ5iI9rVbC" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-      <i class="fab fa-whatsapp social-icon" aria-hidden="true" style="color:#181717;"></i>
-      <span class="social-label">Whatsapp Group</span>
-      <a href="https://github.com/opportunitix" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-      <i class="fab fa-github social-icon" aria-hidden="true" style="color:#181717;"></i>
-      <span class="social-label">GitHub</span>
-    </a>
-</a>
-    </a>
-  </nav>
-</main>
+  <header role="banner">
+    OpportunitiX - Social Media Quick Access
+  </header>
+  <main role="main">
+    <p class="intro-text">
+      Below are the links to access the social media pages of our Community
+    </p>
+    <nav aria-label="Social media quick access links" class="social-links">
+      <a href="https://www.youtube.com/@opportunitix" target="_blank" rel="noopener noreferrer" class="social-link"
+        aria-label="GitHub">
+              <i class="fab fa-youtube social-icon" aria-hidden="true" style="color:#181717;"></i>
+              <span class="social-label">Youtube</span>
+        <a href="https://www.quora.com/Opportunitix" target="_blank" rel="noopener noreferrer" class="social-link"
+          aria-label="GitHub">
+                <i class="fab fa-quora social-icon" aria-hidden="true" style="color:#181717;"></i>
+                <span class="social-label">Quora</span>
+          <a href="https://x.com/opportunitix" target="_blank" rel="noopener noreferrer" class="social-link"
+            aria-label="GitHub">
+                  <i class="fab fa-twitter social-icon" aria-hidden="true" style="color:#181717;"></i>
+                  <span class="social-label">Twitter</span>
+            <a href="https://www.linkedin.com/company/opportunitix/" target="_blank" rel="noopener noreferrer"
+              class="social-link" aria-label="GitHub">
+                    <i class="fab fa-linkedin social-icon" aria-hidden="true" style="color:#181717;"></i>
+                    <span class="social-label">Linkedin</span>
+              <a href="https://www.instagram.com/opportunitix_/" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="GitHub">
+                      <i class="fab fa-instagram social-icon" aria-hidden="true" style="color:#181717;"></i>
+                      <span class="social-label">Instagram</span>
+                <a href="https://www.reddit.com/r/opportunitix/" target="_blank" rel="noopener noreferrer"
+                  class="social-link" aria-label="GitHub">
+                        <i class="fab fa-reddit social-icon" aria-hidden="true" style="color:#181717;"></i>
+                        <span class="social-label">Reddit</span>
+                  <a href="https://medium.com/@opportunitix" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="GitHub">
+                          <i class="fab fa-medium social-icon" aria-hidden="true" style="color:#181717;"></i>
+                          <span class="social-label">Medium</span>
+                    <a href="https://opportunitix.blogspot.com/" target="_blank" rel="noopener noreferrer"
+                      class="social-link" aria-label="GitHub">
+                            <i class="fab fa-google social-icon" aria-hidden="true" style="color:#181717;"></i>
+                            <span class="social-label">Website</span>
+                      <a href="https://chat.whatsapp.com/EmdRPWUejzEChJ5iI9rVbC" target="_blank"
+                        rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                              <i class="fab fa-whatsapp social-icon" aria-hidden="true" style="color:#181717;"></i>
+                              <span class="social-label">Whatsapp Group</span>
+                        <a href="https://github.com/opportunitix" target="_blank" rel="noopener noreferrer"
+                          class="social-link" aria-label="GitHub">
+                                <i class="fab fa-github social-icon" aria-hidden="true" style="color:#181717;"></i>
+                                <span class="social-label">GitHub</span>
+                              </a>
+                      </a>
+                    </a>
+    </nav>
+  </main>
 </body>
+  <footer class="bg-gray-900 border-t border-indigo-700 py-8 mt-16">
+   <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm select-none">
+   <center> <p>
+     © 2025 <a href="https://opportunitix.blogspot.com/">opportunitiX </a>. All rights reserved.
+    </p></center>
+  </footer>
+
 </html>
